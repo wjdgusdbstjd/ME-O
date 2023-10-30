@@ -1,0 +1,1320 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <!-- GSAP (그린속 애니메이션 플랫폼) 포함 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/ScrollMagic.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/plugins/animation.gsap.min.js"></script>
+    <link rel="stylesheet" href="./css/common_css.css">
+    <link rel="stylesheet" href="./css/index.css">
+
+</head>
+
+<body>
+    <div id="wrap">
+        <!--스크롤 위치 확인을 위한 컨트롤러 - 나중에 지우기!-->
+        <div class="scroll-indicator">
+            <div class="indicator-text">Scroll Position:</div>
+            <div class="indicator-value" id="scroll-value">0%</div>
+        </div>
+        <!--스크롤 위치 확인을 위한 컨트롤러 - 나중에 지우기!-->
+        <main>
+            <section id="main">
+                <header>
+                    <ul class="main-ul">
+                        <li><a href="#planning">Planning</a></li>
+                        <li><a href="#design">Design</a></li>
+                        <li><a href="#team">Team</a></li>
+                    </ul>
+                </header>
+                <img class="main-bg" src="./img/main-background.png" alt="">
+
+                <div class="main-left">
+                    <div class="main-logo">
+                        <div class="app-logo" id="app-logo">
+                            <img class="app-img" src="./img/main-app.png" alt=""><!--앱 로고 이미지-->
+                            <img class="app-txt-img" src="./img/main-app-text.png" alt=""><!--앱 텍스트 로고 이미지-->
+                        </div>
+                        <div id="main-app-text">
+                            <p>미래를 위한 오늘, 나를 위한 오늘<br> <!--폰트 다르게-->
+                                <span>ME:O</span>앱을 만나보세요!
+                            </p>
+                        </div>
+
+                    </div>
+
+                    <div class="main-introduce">
+                        <p>Kaywon Univ, Art & Design</p>
+                        <p>Digital Media Design</p>
+                        <p>Graduation Project</p>
+                        <p>Team. <span>아기돼지육남매</span></p>
+                    </div>
+                </div>
+
+                <div class="main-right">
+                    <!-- <img src="./img/main-right-img.png" alt=""> -->
+                    <img class="main-phone" id="main-phone" src="./img/main-phone.png" alt="">
+                    <img class="main-pumi" id="main-pumi" src="./img/main-푸미-2.png" alt="">
+                    <img class="main-toto" id="main-toto" src="./img/main-토토-2.png" alt="">
+                    <img class="main-ohmong" id="main-ohmong" src="./img/main-오몽-2.png" alt="">
+
+                    <div class="effects">
+                        <!--캐릭터 효과 이미지들-->
+                        <!-- <img class="effect-1" src="./img/푸미-효과-1.png" alt="">
+                        <img class="effect-2" src="./img/푸미-효과-2.png" alt="">
+                        <img class="effect-3" src="./img/푸미-효과-3.png" alt="">
+                        <img class="effect-4" src="./img/토토-효과-1.png" alt="">
+                        <img class="effect-5" src="./img/토토-효과-2.png" alt="">
+                        <img class="effect-6" src="./img/토토-효과-3.png" alt="">
+                        <img class="effect-7" src="./img/오몽-효과-1.png" alt="">
+                        <img class="effect-8" src="./img/오몽-효과-2.png" alt="">
+                        <img class="effect-9" src="./img/오몽-효과-3.png" alt=""> -->
+                    </div>
+                </div><!--메인 일러스트 영역-->
+            </section>
+
+
+
+            <section id="planning">
+                <a name="planning"></a>
+                <div class="planning-wrap">
+                    <img class="planning-ch" src="./img/planning-character.png" alt=""><!--planning영역 맨 상단 캐릭터들 이미지-->
+                    <div class="overview">
+                        <strong>overview</strong>
+                        <div class="overview-content">
+                            <div class="overview-left">
+                                <!-- <strong>overview</strong> -->
+                                <h1 id="overview-txt-ani">비만이 되는 생활 습관을<br>
+                                    <span>옆에서 교정해 주는</span><br>
+                                    온라인 서비스
+                                </h1>
+                                <p>ME:O는 소아비만 위험군 아동과 부모님들을 위한 <span>식습관 및 생활습관 관리</span> <br>
+                                    <span>파트너</span>입니다! 우리는 소아비만 초기와 위험군 아동들에 집중하여 예방과 관 <br>
+                                    리를 할 수 있는 습관 관리 서비스를 제공합니다. 오프라인의 <br>
+                                    프로젝트를 온라인화함과 동시에 차별화 요소로 미오의 감성을 더합니다.
+                                </p>
+                            </div>
+
+                            <div class="overview-right">
+                                <div class="overview-circle-1">
+                                    아이들에겐 <br>
+                                    <span>꾸준함의 동기부여 제공을</span>
+                                </div>
+                                <div class="overview-arrow">
+                                    <img src="./img/overview-red-arrow.png" alt=""> <!--노란색 화살표-->
+                                    <img src="./img/overview-red-arrow-2.png" alt=""> <!--빨간색 화살표-->
+                                </div>
+                                <div class="overview-circle-2">
+                                    부모님에겐<br>
+                                    <span>관리의 기준과 정보 제공을</span>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="background">
+
+                        <div class="bg-text">
+                            <strong>Background</strong>
+                            <h2><span>소아비만</span>의 심각성을 아시나요?</h2>
+                            <p>
+                                소아비만(Child Obesity)이란, 체중이 나이 평균보다 20% 이상인 경우를 말합니다. 학동기에 주로 발<br>
+                                생해서 부모님들은 심각히 받아들이지 않지만, 오히려 소아기에 발생하기 때문에 위험합니다. 소아비<br>
+                                만은 신체적, 정신적 문제를 일으키고, 체중 조절에 있어 성인 비만보다 어렵다는 점이 있습니다.
+                            </p>
+                        </div>
+
+                        <div class="bg-chart">
+                            <div class="chart-1"><!--왼쪽 차트 전체 하나로 묶음-->
+                                <div class="chart-text"> <!--chart에서 위에 텍스트 부분-->
+                                    <div class="problem">Problem 1</div>
+                                    <h3>합병증</h3>
+                                    <p>초등학생 고혈압 의심 비율</p>
+                                </div>
+
+                                <div class="chart-img-1"> <!--차트 이미지, 4학년 1학년 부분 display: flex-->
+                                    <div class="square-chart">
+                                        <div class="square-chart-img">
+                                            <div class="square-ch-1"></div> <!--실제 차트 부분 -왼쪽 -->
+                                            <div class="square-ch-2"></div> <!--실제 차트 부분 -오른쪽 -->
+                                        </div>
+                                        <div class="bottom-line"></div>
+                                    </div>
+
+                                    <div class="chart-exp-1"> <!--차트 4학년 1학년 설명 부분-->
+                                        <div class="four-grade"> <!--4학년-->
+                                            <div class="four-circle"></div>
+                                            <p>4학년</p>
+                                        </div>
+
+                                        <div class="first-grade"><!--1학년-->
+                                            <div class="first-circle"></div>
+                                            <p>1학년</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <p class="chart-last-txt">자료 : 우리아이들 병원 초등학생 건강검진 결과</p>
+                            </div>
+
+
+
+                            <div class="chart-2">
+                                <div class="chart-text">
+                                    <div class="problem">Problem 2</div>
+                                    <h3>체중 조절의 어려움</h3>
+                                    <p>소아비만 치료 비율</p>
+                                </div>
+
+                                <div class="chart-img-2">
+                                    <img class="circle-chart" src="./img/circle-chart.png" alt=""> <!--파이 차트 이미지로-->
+                                    <div class="chart-exp-2"><!--차트 오른쪽 - 성인기비만, 정상체중으로 도아옴-->
+                                        <div class="adult"> <!--성인기 비만-->
+                                            <div class="adult-circle"></div>
+                                            <p>성인기 비만</p>
+                                        </div>
+
+                                        <div class="normal-weight"> <!--정상체중으로 돌아옴-->
+                                            <div class="normal-circle"></div>
+                                            <p>정상체중으로 돌아옴</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <p class="chart-last-txt">자료 : 우리아이들 병원 초등학생 건강검진 결과</p>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="care">
+                        <div class="care-top">
+                            <div class="care-top-left">
+                                <h1>현재 치료법은 3단계로 진행됩니다<br>
+                                    우리는 여기서 <span>1단계에 집중합니다</span></h1>
+                                <p>위험군을 예방하고, 초기에 습관을 잡는 일이 이 단계에서 이루어집니다. <br>
+                                    그리고 이런 예방은 치료만큼 중요한 과정입니다. 하지만 대부분의 경우,<br> 주기적으로 병원에 가지 못하거나, 동기부여가 잘 되지 못해서 이
+                                    단계에<br> 실패합니다. 예방도 중요한 만큼 1단계가 문제점이라고 판단했습니다.</p>
+                            </div>
+
+                            <div class="care-top-right"><!--display:flex - flexflow:column-->
+                                <!--dot-line-->
+                                <img class="care-top-line" src="./img/dot-line.png" alt="">
+                                <ul class="care-top-stage"><!--display:flex-->
+                                    <li>
+                                        <div class="care-circle-0"></div><!--1단계 이전 노란색 원-->
+                                    </li>
+                                    <li>
+                                        <div class="care-circle-1"></div><!--1단계 보라색 원-->
+                                        <P>1단계</P>
+                                        <img src="./img/care-1stage-icon.png" alt="">
+                                    </li>
+                                    <li>
+                                        <div class="care-circle-1"></div><!--2단계 보라색 원-->
+                                        <P>2단계</P>
+                                        <img src="./img/care-2stage-icon.png" alt="">
+                                    </li>
+                                    <li>
+                                        <div class="care-circle-1"></div><!--3단계 보라색 원-->
+                                        <P>3단계</P>
+                                        <img src="./img/care-3stage-icon.png" alt="">
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="care-bottom">
+                            <img class="care-bottom-line" src="./img/dot-line.png" alt=""><!--dot-line-->
+                            <div class="care-bottom-stage">
+                                <ul>
+                                    <li>
+                                        <div class="care-circle-1"></div><!--bottom 1단계 보라색 원-->
+                                        <h3>1단계</h3>
+                                        <P>식습관 개선</P>
+                                    </li>
+                                    <li>
+                                        <div class="care-circle-0"></div><!--bottom 2단계 노란색 원-->
+                                        <p>2단계</p><!--블러 텍스트-->
+                                    </li>
+                                    <li>
+                                        <div class="care-circle-0"></div>
+                                        <p>3단계</p>
+                                    </li>
+                                    <li>
+                                        <div class="care-circle-0"></div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="goal">
+                        <div class="begie-1"></div>
+                        <div class="begie-2"></div>
+                        <div class="goal-top-txt">
+                            <strong>Project Goal</strong>
+                            <h1>아이와 부모가 <span>습관을 잡는 과정에서 도움</span>이 될 수 있도록</h1>
+                            <p>
+                                1단계에서 대부분 아이들은 동기부여가 잘되지 않아서 식습관을 잡지 못합니다. 그리고 대부분 부모는 정보가 많지 않고,<br>
+                                꾸준한 관리도 힘들어서 습관을 잡고 유지하기 힘들어합니다. 그래서 미오는 이런 문제를 도우려 합니다.
+                            </p>
+                        </div>
+                        <div class="goal-bottom">
+                            <div class="goal-bottom-1">
+                                <div class="slide habit">습관 개선 활동</div>
+                                <div class="slide exersice">운동</div>
+                                <div class="slide hospital">병원 매칭</div>
+                                <div class="slide character">캐릭터</div>
+                                <div class="slide diary">다이어리</div>
+                                <div class="slide habit">습관 개선 활동</div>
+                                <div class="slide exersice">운동</div>
+                                <div class="slide hospital">병원 매칭</div>
+                                <div class="slide character">캐릭터</div>
+                                <div class="slide diary">다이어리</div>
+                                <div class="slide habit">습관 개선 활동</div>
+                                <div class="slide exersice">운동</div>
+                                <div class="slide hospital">병원 매칭</div>
+                                <div class="slide character">캐릭터</div>
+                                <div class="slide diary">다이어리</div>
+                                <div class="slide habit">습관 개선 활동</div>
+                                <div class="slide exersice">운동</div>
+                                <div class="slide hospital">병원 매칭</div>
+                                <div class="slide character">캐릭터</div>
+                                <div class="slide diary">다이어리</div>
+                                <div class="slide habit">습관 개선 활동</div>
+                                <div class="slide exersice">운동</div>
+                                <div class="slide hospital">병원 매칭</div>
+                                <div class="slide character">캐릭터</div>
+                                <div class="slide diary">다이어리</div>
+                            </div>
+                            <div class="goal-bottom-2">
+                                <div class="slide tranning">트레이닝</div>
+                                <div class="slide for-parent">부모님을 위한</div>
+                                <div class="slide bmi">BMI 측정</div>
+                                <div class="slide meal">식단</div>
+                                <div class="slide education">비만 교육</div>
+                                <div class="slide tranning">트레이닝</div>
+                                <div class="slide for-parent">부모님을 위한</div>
+                                <div class="slide bmi">BMI 측정</div>
+                                <div class="slide meal">식단</div>
+                                <div class="slide education">비만 교육</div>
+                                <div class="slide tranning">트레이닝</div>
+                                <div class="slide for-parent">부모님을 위한</div>
+                                <div class="slide bmi">BMI 측정</div>
+                                <div class="slide meal">식단</div>
+                                <div class="slide education">비만 교육</div>
+                                <div class="slide tranning">트레이닝</div>
+                                <div class="slide for-parent">부모님을 위한</div>
+                                <div class="slide bmi">BMI 측정</div>
+                                <div class="slide meal">식단</div>
+                                <div class="slide education">비만 교육</div>
+                                <div class="slide tranning">트레이닝</div>
+                                <div class="slide for-parent">부모님을 위한</div>
+                                <div class="slide bmi">BMI 측정</div>
+                                <div class="slide meal">식단</div>
+                                <div class="slide education">비만 교육</div>
+                                <div class="slide tranning">트레이닝</div>
+                                <div class="slide for-parent">부모님을 위한</div>
+                                <div class="slide bmi">BMI 측정</div>
+                                <div class="slide meal">식단</div>
+                                <div class="slide education">비만 교육</div>
+                            </div> <!--블러조금-->
+                            <div class="goal-bottom-3">
+                                <div class="slide">포인트 쌓기</div>
+                                <div class="slide">건강식 상점</div>
+                                <div class="slide">레시피 추천</div>
+                                <div class="slide">경쟁 게임</div>
+                                <div class="slide">포인트 쌓기</div>
+                                <div class="slide">건강식 상점</div>
+                                <div class="slide">레시피 추천</div>
+                                <div class="slide">경쟁 게임</div>
+                                <div class="slide">포인트 쌓기</div>
+                                <div class="slide">건강식 상점</div>
+                                <div class="slide">레시피 추천</div>
+                                <div class="slide">경쟁 게임</div>
+                                <div class="slide">포인트 쌓기</div>
+                                <div class="slide">건강식 상점</div>
+                                <div class="slide">레시피 추천</div>
+                                <div class="slide">경쟁 게임</div>
+                                <div class="slide">포인트 쌓기</div>
+                                <div class="slide">건강식 상점</div>
+                                <div class="slide">레시피 추천</div>
+                                <div class="slide">경쟁 게임</div>
+                                <div class="slide">포인트 쌓기</div>
+                                <div class="slide">건강식 상점</div>
+                                <div class="slide">레시피 추천</div>
+                                <div class="slide">경쟁 게임</div>
+                            </div> <!--블러 좀더-->
+                        </div>
+                    </div>
+                </div><!--planning wrap 마지막-->
+            </section>
+
+            <section id="identity">
+                <div class="identity-left">
+                    <div class="identity-circle"></div>
+                    <img class="identity-hand-2" src="./img/identity-hand-2.png" alt="">
+                    <img class="identity-pumi" src="./img/identity-pumi.png" alt="">
+                    <img class="identity-toto" src="./img/identity-toto.png" alt="">
+                    <img class="identity-ohmong" src="./img/identity-ohmong.png" alt="">
+                </div>
+                <div class="identity-right">
+                    <img class="identity-app-logo" src="./img/identity-app-logo.png" alt="">
+                    <img class="identity-text-logo" src="./img/identity-text-logo.png" alt="">
+                    <p id="identity-p">우리 아이와 함께하는 습관 고치기 서비스<br>
+                        미오를 소개합니다!</p>
+                </div>
+            </section>
+
+            <section id="video">
+                <h1>video</h1>
+            </section>
+
+
+            <section id="value">
+                <div class="kid">
+                    <strong>Service Value</strong>
+                    <h1>아이들에겐 동기부여와<br>
+                        치료의 즐거움을!
+                    </h1>
+                    <ul class="kid-tag">
+                        <li>식사 속도 조절</li>
+                        <li>주기적인 BMI 확인</li>
+                        <li>목표 달성 챌린지</li>
+                        <li>강의 학습</li>
+                    </ul>
+                    <img class="value-kid-tablet" src="./img/value-kid-tablet.png" alt="">
+                    <img class="value-kid-pumi" src="./img/value-kid-pumi.png" alt="">
+                </div>
+                <div class="parent">
+                    <strong>Service Value</strong>
+                    <h1>부모님에겐 관리의<br>
+                        기준과 정보를!
+                    </h1>
+                    <ul class="parent-tag">
+                        <li>자녀 상태 기록</li>
+                        <li>주기적인 BMI 확인</li>
+                        <li>정보 공유</li>
+                        <li>강의 학습</li>
+                    </ul>
+                    <img class="value-parent-phone" src="./img/value-parent-phone.png" alt="">
+                </div>
+            </section>
+
+
+
+
+            <section id="branding">
+                <div class="intro">
+                    <strong>Branding</strong>
+                    <h1><span>미</span>래를 위한 <span>오</span>늘을 함께 도와줄<br>
+                        <span>미오 친구들</span>을 소개할게요!
+                    </h1>
+                    <p>
+                        건강한 식습관을 잡는 데 도움을 주는 ‘신호등 식이요법’이 있다는 것을 알고 계신가요? ME:O는 이 신호등 식이요법에서<br>
+                        착안하여 캐릭터를 만들었습니다. 신호등 식이요법을 캐릭터의 성격으로 표현하여 아이들이 더 친근하게 느끼도록요!
+                    </p>
+                    <img class="introduce-character" src="./img/introduce-character-all.png" alt="">
+                    <img class="introduce-hill" src="./img/introduce-hill.png" alt="">
+                </div>
+
+                <div class="character">
+                    <strong>Character</strong>
+                    <div class="pumi">
+                        <img class="character-1" src="./img/character-pumi.png" alt="">
+                        <div class="pumi-text">
+                            <img class="pumi-name" src="./img/pumi-name.png" alt="">
+                            <h2>언제나 친절한 푸미</h2>
+                            <p>
+                                푸미는 건강한 음식을 먹는 것을 좋아해서 언제나 아프지 <br>
+                                않아요. 두려움 없이 항상 도전하는 푸미를 보고 친구들은<br>
+                                한숨을 쉬지만 사실은 부러워해요. 우리 모두가 푸미가 될<br>
+                                수 있어요!
+                            </p>
+                        </div>
+                    </div>
+                    <div class="ohmong">
+                        <div class="ohmong-text">
+                            <img class="ohmong-name" src="./img/ohmong-name.png" alt="">
+                            <h2>우리의 중재자 오몽이</h2>
+                            <p>
+                                여유롭고 느긋한 성격으로 토토가 푸미를 보고 화가 나 달<br>
+                                려가면 오몽이는 항상 특유의 느긋함으로 사이를 중재하<br>
+                                는 마음 깊은 아이랍니다. 하지만 가끔 오몽이가 화를 낼 <br>
+                                때면 매우 무서워요! 그때는 모두 도망쳐야 합니다!
+                            </p>
+                        </div>
+                        <img class="character-2" src="./img/character-ohmong.png" alt="">
+                    </div>
+                    <div class="toto">
+                        <img class="character-3" src="./img/character-toto.png" alt="">
+                        <div class="toto-text">
+                            <img class="toto-name" src="./img/toto-name.png" alt="">
+                            <h2>반전매력 토토</h2>
+                            <p>
+                                토토는 겉보기엔 매우 작고 귀엽지만, 그 겉모습에 속으면 <br>
+                                안 돼요! 속은 누구보다 불같은 앙큼한 매력을 가진 소녀<br>
+                                랍니다. 하지만 누구보다 친구를 생각하고 우정을 소중히 <br>
+                                여겨요. 우리 토토와 한번 친해지면 그 매력에 빠져 쉽게 <br>
+                                헤어나오지 못할걸요?
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+
+            <section id="design">
+                <a name="design"></a>
+                <div class="system">
+                    <div class="system-bg"> <!--배경이미지 설정을 위한 div-->
+                        <!-- <img src="./img/system-design-wave.png" alt=""> -->
+                        <strong>System Design</strong>
+                        <h1>미오 서비스의 일관성 유지를 위해<br>
+                            디자인 시스템을 구축하였습니다.</h1>
+                    </div>
+                </div>
+
+                <div class="color">
+                    <strong>Color System</strong>
+                    <h3 class="color-h3-1">Brand Color</h3>
+                    <div class="color-all">
+                        <div class="color-top">
+                            <div class="purple">
+                                <div class="purple-1">
+                                    #8C3EF0
+                                </div>
+                                <div class="purple-2">
+                                    #BC88FF
+                                </div>
+                            </div>
+
+                            <div class="green">
+                                <div class="green-1">
+                                    #8C3EF0
+                                </div>
+                                <div class="green-2">
+                                    #BC88FF
+                                </div>
+                            </div>
+
+                            <div class="yellow">
+                                <div class="yellow-1">
+                                    #8C3EF0
+                                </div>
+                                <div class="yellow-2">
+                                    #BC88FF
+                                </div>
+                            </div>
+
+                            <div class="red">
+                                <div class="red-1">
+                                    #8C3EF0
+                                </div>
+                                <div class="red-2">
+                                    #BC88FF
+                                </div>
+                            </div>
+                        </div>
+                        <h3 class="color-h3-2">Gray Scale</h3>
+                        <div class="color-bottom">
+                            <div>
+                                #FFFFFF
+                            </div>
+                            <div>
+                                #D1D1D1
+                            </div>
+                            <div>
+                                #B0B0B0
+                            </div>
+                            <div>
+                                #8E8E8E
+                            </div>
+                            <div>
+                                #6C6C6C
+                            </div>
+                            <div>
+                                #484848
+                            </div>
+                            <div>
+                                #232323
+                            </div>
+                        </div>
+                    </div> <!--전체를 담는 div-->
+                </div>
+
+                <div class="typo">
+                    <strong>Typography</strong>
+                    <div class="typo-content">
+                        <div class="typo-left">
+                            <p class="typing-trigger">AppleSDGothicNeo</p>
+                            <!-- <h1>미오와 함께<br>
+                                건강한 식습관으로<br>
+                                소아 비만을 예방해요!</h1> -->
+                            <h1 class="typo-typing-1"></h1>
+                            <h1 class="typo-typing-2"></h1>
+                            <h1 class="typo-typing-3"></h1>
+                        </div>
+                        <div class="typo-right">
+                            <div class="headline-subtitle">
+                                <dl>
+                                    <dt>Headline 1</dt>
+                                    <dd>AppleSDGothicNeoSB00 26pt</dd>
+                                </dl>
+                                <dl>
+                                    <dt>Headline 2</dt>
+                                    <dd>AppleSDGothicNeoR00 26pt</dd>
+                                </dl>
+                                <dl>
+                                    <dt>Subtitle 1</dt>
+                                    <dd>AppleSDGothicNeoSB00 20pt</dd>
+                                </dl>
+                                <dl>
+                                    <dt>Subtitle 2</dt>
+                                    <dd>AppleSDGothicNeoSB00 18pt</dd>
+                                </dl>
+                            </div>
+                            <div class="typo-body">
+                                <dl>
+                                    <dt>Body 1</dt>
+                                    <dd>AppleSDGothicNeoR00 15pt</dd>
+                                </dl>
+
+                                <dl>
+                                    <dt>Body 2</dt>
+                                    <dd>AppleSDGothicNeoR00 14pt</dd>
+                                </dl>
+
+                                <dl>
+                                    <dt>Body 1</dt>
+                                    <dd>AppleSDGothicNeoSB00 17pt</dd>
+                                </dl>
+
+                                <dl>
+                                    <dt>Body 2</dt>
+                                    <dd>AppleSDGothicNeoM00 14pt</dd>
+                                </dl>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="logo">
+                    <div class="logo-left">
+                        <strong>Logo</strong>
+                        <div class="logo-left-img">
+                            <!-- <img src="./img/logo-description.png" alt=""> -->
+                            <div class="app-bg"></div>
+                            <img class="app-comp-1" src="./img/app-소아-1.png" alt="">
+                            <img class="app-comp-2" src="./img/app-소아-2.png" alt="">
+                            <img class="app-comp-3" src="./img/app-habit.png" alt="">
+                            <!-- <div class="line-1"></div> -->
+                            <img class="line-1" src="./img/logo-line-1.png" alt="">
+                            <img class="line-2" src="./img/logo-line-2.png" alt="">
+                            <!-- <div class="line-2"></div> -->
+                            <p class="logo-kid-text-1"></p>
+                            <div class="line-3"></div>
+                            <img class="habit-icon" src="./img/habit-icon.png" alt="">
+                            <p class="logo-kid-text-2"></p>
+                            <p class="logo-kid-text-3"></p>
+                        </div>
+                    </div>
+                    <div class="logo-right">
+                        <div class="logo-right-top">
+                            <img class="logo-phone-1" src="./img/logo-phone-1.png" alt="">
+                            <img class="logo-phone-2" src="./img/logo-phone-2.png" alt="">
+                        </div>
+
+                        <div class="logo-right-bottom">
+                            <img src="./img/logo-app-small.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+
+            <section id="component">
+                <strong>Component</strong>
+                <div class="component-wrap">
+                    <img src="./img/component-bg.png" alt="">
+                </div> <!--White-box-->
+            </section>
+
+
+
+
+            <!-- 수진  -->
+            <section id="service">
+                <!--스티키-->
+                <div id="toggle-wrap">
+                    <div id="toggle">
+                        <ul id="flow_menu">
+                            <li id="menu1" class="selected"><a href="#service1">모바일</a></li>
+                            <li id="menu2"><a href="#service2">태블릿</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="frame">
+                    <!--mobile-->
+
+                    <section id="service1">
+                        <div class="mobile-start">
+                            <h2 class="service_name">Sign up to Start!</h2>
+                            <h1 class="service_content">
+                                부모님의 정보와 자녀의 상태를 입력하세요!
+                                <br />
+                                미오가 더 세밀하게 진단할 수 있습니다
+                            </h1>
+                            <div class="mobile-starts">
+                                <div class="bg-box"></div>
+                                <img src="./img2/mobile/start/startimg1.png">
+                                <img class="line1" src="./img2/mobile/start/line.png">
+                            </div>
+                        </div>
+
+                        <div class="mobile-flow">
+                            <div class="flows">
+                                <div id="flows-name">
+                                    <h3>이름</h3>
+                                    <img id="flows-img" src="./img2/mobile/flow/screen1.png">
+                                </div>
+                                <div id="flows-gender">
+                                    <h3>성별</h3>
+                                    <img id="flows-img" src="./img2/mobile/flow/screen2.png">
+                                </div>
+                                <div id="flows-age">
+                                    <h3>나이</h3>
+                                    <img id="flows-img" src="./img2/mobile/flow/screen3.png">
+                                </div>
+                                <div id="flows-figure">
+                                    <h3>키/몸무게</h3>
+                                    <img id="flows-img" src="./img2/mobile/flow/screen4.png">
+                                </div>
+                                <div id="flows-weight">
+                                    <h3>체중계 연동</h3>
+                                    <img id="flows-img" src="./img2/mobile/flow/screen5.png">
+                                </div>
+                                <div id="flows-finish">
+                                    <img class="particle" src="./img2/mobile/flow/particle.png">
+                                    <h3>완료!</h3>
+                                    <img id="flows-img" src="./img2/mobile/flow/screen6.png">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bg-wrap">
+                            <div class="mobile-home">
+                                <div class="mobile_content">
+                                    <h2 class="service_name">홈 화면</h2>
+                                    <h1 class="service_content">
+                                        자녀의 체질량 지수, 주간 변화 그래프, 목표 달성률을
+                                        <br />
+                                        한눈에 확인해보세요!
+                                    </h1>
+                                </div>
+                                <div class="mobile-home_under">
+                                    <div class="mobile-home_left">
+                                        <div class="mobile-homes">
+                                            <span class="mobile-home_left_content">
+                                                <span class="mobile-home_left_content_line" id="mobile-content">
+                                                    <h3>주간 변화 그래프</h3>
+                                                    <div class="mobile_line"><img src="./img2/mobile/home/line2.png">
+                                                    </div>
+                                                </span>
+
+                                                <h4 id="mobile-text">
+                                                    매일 변하는 아이의 체질량 정도를 한
+                                                    <br />
+                                                    눈에 보기 편하도록 한 주 단위로 끊
+                                                    <br />
+                                                    어서 시각적으로 표현해줘요
+                                                </h4>
+                                            </span>
+
+                                            <span class="mobile-home_left_graph">
+                                                <span class="mobile-home_left_graph_line" id="mobile-content">
+                                                    <h3>체질량 지수</h3>
+                                                    <div class="mobile_line"><img src="./img2/mobile/home/line1.png">
+                                                    </div>
+                                                </span>
+                                                <h4 id="mobile-text">
+                                                    자녀가 또래 아이들에 비해 체질량 지
+                                                    <br />
+                                                    수가 어디에 위치하는지 한눈에 파악
+                                                    <br />
+                                                    할 수 있어요.
+                                                </h4>
+                                            </span>
+                                            <img id="mobile-toto" src="./img2/mobile/home/toto.png">
+
+                                        </div>
+                                        <div class="mobile-home_left_img">
+                                            <img src="./img2/mobile/home/screen1.png">
+                                        </div>
+                                    </div>
+                                    <div class="mobile-home_right">
+                                        <div class="mobile-home_right_content_bmi">
+                                            <div class="bmiimgs">
+                                                <img src="./img2/mobile/home/screen2.png">
+                                                <img src="./img2/mobile/home/screen3.png">
+                                            </div>
+                                            <img id="mobile-pumi" src="./img2/mobile/home/pumi.png">
+                                        </div>
+
+                                        <div class="mobile-home_right_content">
+                                            <span class="mobile-home_right_content_goals">
+                                                <div class="mobile-home_right_img">
+                                                    <img id="mobile-ohmong" src="./img2/mobile/home/ohmong.png">
+                                                    <img id="mobile-un" src="./img2/mobile/home/screen4.png">
+                                                </div>
+                                                <div class="mobile-home_wrap">
+                                                    <div class="mobile_line2"><img src="./img2/mobile/home/line3.png">
+                                                    </div>
+                                                    <div class="mobile-home_wrap2">
+                                                        <span class="mobile-home_right_content_goals_line"
+                                                            id="mobile-content2">
+                                                            <h3>목표 달성률</h3>
+                                                        </span>
+                                                        <h4 id="mobile-text">
+                                                            부모와 자녀가 함께 계획한 목표를 얼
+                                                            <br />
+                                                            만큼 이뤘는지, 얼만큼 더 해야하는지
+                                                            <br />
+                                                            모아서 보여줘요.
+                                                        </h4>
+                                                    </div>
+                                                </div>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mobile-bmi">
+                                <div class="mobile_content">
+                                    <h2 class="service_name">BMI 화면</h2>
+                                    <h1 class="service_content">
+                                        연동한 체중계로 자녀의 BMI를 한눈에!
+                                        <br />
+                                        한 달 변화부터 자세한 신체 데이터까지
+                                    </h1>
+                                </div>
+                                <div class="mobile-bmi_under">
+                                    <div class="mobile-bmi_left">
+                                        <div class="mobile-bmi_left_img">
+                                            <img src="./img2/mobile/bmi/screen1.png">
+                                        </div>
+                                    </div>
+                                    <div class="mobile-bmi_right">
+                                        <div class="mobile-bmi_right_up">
+                                            <div class="mobile_line"><img src="./img2/mobile/bmi/line.png"></div>
+                                            <span class="mobile-bmi_right_goals">
+                                                <span class="mobile-bmi_right_goals_line">
+                                                    <h3>한 달 체중 변화</h3>
+                                                </span>
+                                                <h4 id="mobile-text">
+                                                    체중계로 측정한 신체 데이터 변화를
+                                                    <br />
+                                                    월별로 정리하여 한눈에 보여줘요.
+                                                    <br />
+                                                    우리 아이가 어떻게 변화하고 있는지
+                                                    <br />
+                                                    앱 화면으로 확인할 수 있어요!
+                                                </h4>
+
+                                            </span>
+                                        </div>
+                                        <div class="mobile-bmi_right_down">
+                                            <div class="mobile_line"><img src="./img2/mobile/bmi/line.png"></div>
+                                            <span class="mobile-bmi_right_down_line">
+                                                <span class="mobile-bmi_right_goals_line">
+                                                    <h3>매주 업데이트되는 신체 데이터</h3>
+                                                </span>
+                                                <img src="./img2/mobile/bmi/screen2.png">
+                                                <img src="./img2/mobile/bmi/screen3.png">
+                                                <img src="./img2/mobile/bmi/screen4.png">
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="mobile-diary">
+                                <div class="mobile_content">
+                                    <h2 class="service_name">다이어리</h2>
+                                    <h1 class="service_content">
+                                        자녀의 상태를 기록하고
+                                        <br />
+                                        다른 부모들과 정보를 공유해보세요!
+                                    </h1>
+                                </div>
+                                <div class="mobile-diary_under">
+                                    <div class="mobile-diary_left">
+                                        <div class="mobile-diary_warp">
+                                            <span class="mobile-diary_left_content">
+                                                <span class="mobile-diary_left_recode_line" id="mobile-content">
+                                                    <h3>자녀의 습관 기록</h3>
+                                                    <div class="mobile_line"><img src="./img2/mobile/diary/line1.png">
+                                                    </div>
+                                                </span>
+                                                <h4 id="mobile-text">
+                                                    우리 아이가 오늘 어떤걸 잘 먹었는지
+                                                    <br />
+                                                    그리고 어떤 것이 입에 안 맞았는지와
+                                                    <br />
+                                                    같은 기록을 다이어리에 바로 정리할
+                                                    <br />
+                                                    수 있어요.
+                                                </h4>
+                                            </span>
+                                            <span class="mobile-diary_left_save">
+                                                <span class="mobile-diary_left_save_line" id="mobile-content">
+                                                    <h3>저장하고 싶은 정보는 저장</h3>
+                                                    <div class="mobile_line"><img src="./img2/mobile/diary/line2.png">
+                                                    </div>
+                                                </span>
+                                                <h4 id="mobile-text">
+                                                    다른 사람들이 작성한 피드를 스크랩
+                                                    <br />
+                                                    할 수 있어요. 스크랩 화면을 원할
+                                                    <br />
+                                                    때 바로 볼 수 있어요.
+                                                </h4>
+                                            </span>
+                                        </div>
+                                        <div class="mobile-diary_left_img">
+                                            <img src="./img2/mobile/diary/screen1.png">
+                                        </div>
+                                    </div>
+                                    <div class="mobile-diary_right">
+                                        <div class="mobile-diary_right_img">
+                                            <img src="./img2/mobile/diary/screen2.png">
+                                        </div>
+                                        <div class="mobile-diary_right_content">
+                                            <span class="mobile-diary_right_content_comu">
+                                                <h3>부모들과의 커뮤니티</h3>
+                                                <h4 id="mobile-text">
+                                                    앱의 피드를 통해서 요리의 레시피나
+                                                    <br />
+                                                    운동 추천, 놀이 추천과 같이 자잘한
+                                                    <br />
+                                                    정보를 공유하고, 질문해 보세요.
+                                                </h4>
+                                                <img src="./img2/mobile/diary/screen3.png">
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mobile-teach">
+                                <div class="mobile_content">
+                                    <h2 class="service_name">강의</h2>
+                                    <h1 class="service_content white">
+                                        정보 공유로는 부족할 때!
+                                        <br />
+                                        전문가가 들려주는 강의들과 함께해요
+                                    </h1>
+                                </div>
+                                <div class="mobile-teach_under">
+                                    <div class="mobile-teach_left">
+                                        <div class="mobile-teach_left_wrap">
+                                            <span class="mobile-teach_left_content">
+                                                <span class="mobile-teach_left_content_line" id="mobile-content">
+                                                    <h3>인기 강의</h3>
+                                                    <div class="mobile_line"><img src="./img2/mobile/teach/line1.png">
+                                                    </div>
+                                                </span>
+                                                <h4 id="mobile-text">
+                                                    미오에서만 진행하는 특강이나, 현재
+                                                    <br />
+                                                    다른 사람들도 많이 듣고 있는 교육을
+                                                    <br />
+                                                    정리해서 보여줘요.
+                                                </h4>
+                                            </span>
+
+                                            <span class="mobile-teach_left_graph">
+                                                <span class="mobile-teach_left_graph_line" id="mobile-content">
+                                                    <h3>듣고 있던 강의</h3>
+                                                    <div class="mobile_line"><img src="./img2/mobile/teach/line2.png">
+                                                    </div>
+                                                </span>
+                                                <h4 id="mobile-text">
+                                                    자녀가 또래 아이들에 비해 체질량 지
+                                                    <br />
+                                                    수가 어디에 위치하는지 한눈에 파악
+                                                    <br />
+                                                    할 수 있어요.
+                                                </h4>
+                                            </span>
+                                        </div>
+                                        <div class="mobile-teach_left_img">
+                                            <img src="./img2/mobile/teach/screen1.png">
+                                        </div>
+                                    </div>
+
+                                    <div class="mobile-teach_right">
+                                        <div class="mobile-teach_right_up">
+                                            <div class="mobile_line"><img src="./img2/mobile/teach/line3.png"></div>
+                                            <span class="mobile-teach_right_goals" id="mobile-content3">
+                                                <span class="mobile-teach_right_goals_line">
+                                                    <h3>AI 맞춤 강좌</h3>
+                                                </span>
+                                                <h4 id="mobile-text">
+                                                    각 콘텐츠를 자녀에게 맞게 선택해서
+                                                    <br />
+                                                    전문적인 지식이나 조언, 정보 등을
+                                                    <br />
+                                                    얻을 수 있어요.
+                                                </h4>
+                                            </span>
+                                        </div>
+                                        <div class="mobile-teach_right_down">
+                                            <span class="mobile-teach_right_down_line">
+                                                <img src="./img2/mobile/teach/screen2.png">
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mobile-set">
+                                <div class="mobile_content">
+                                    <h2 class="service_name">설정</h2>
+                                    <h1 class="service_content">
+                                        부모의 프로필을 저장, 또는 수정하고
+                                        <br />
+                                        자녀 정보를 기억하고 수정하세요
+                                    </h1>
+                                </div>
+                                <div class="mobile-set_under">
+                                    <div class="mobile-set_left">
+                                        <span class="mobile-set_left_line" id="mobile-content">
+                                            <h3>자녀 정보</h3>
+                                            <div class="mobile_line"><img src="./img2/mobile/set/line1.png"></div>
+                                        </span>
+                                        <img id="mobile-set_img" src="./img2/mobile/set/screen_left.png">
+                                    </div>
+                                    <div class="mobile-set_mid">
+                                        <img id="mobile-set_img" src="./img2/mobile/set/screen1.png">
+                                    </div>
+                                    <div class="mobile-set_right">
+                                        <span class="mobile-set_right_line" id="mobile-content2">
+                                            <div class="mobile_line"><img src="./img2/mobile/set/line2.png"></div>
+                                            <h3>프로필 수정</h3>
+                                        </span>
+                                        <img id="mobile-set_img" src="./img2/mobile/set/screen_right.png">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!--tablet-->
+                    <section id="service2">
+                        <div class="tablet-start">
+                            <h2 class="service_name">Connect with parents!</h2>
+                            <h1 class="service_content">
+                                부모님과의 핸드폰과 태블릿을 연결해
+                                <br />
+                                습관 개선에 함께하세요
+                            </h1>
+                            <div class="tablet-starts">
+                                <div class="bg-box"></div>
+                                <img src="./img2/tablet/start/screen1.png">
+                                <img class="line1" src="./img2/tablet/start/line1.png">
+                            </div>
+                        </div>
+                        <div class="tablet-flow">
+                            <div class="flows">
+                                <div id="flows-name">
+                                    <h3>부모용 모바일 화면</h3>
+                                    <img id="flows-img" src="./img2/tablet/flow/screen1.png">
+                                </div>
+                                <div id="flows-finish">
+                                    <img class="particle" src="./img2/tablet/flow/particle.png">
+                                    <h3>테블릿 화면과 연결!</h3>
+                                    <img id="flows-img" src="./img2/tablet/flow/screen2.png">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="tablet-home">
+                            <div class="tablet_content">
+                                <h2 class="service_name">홈 화면</h2>
+                                <h1 class="service_content">
+                                    자녀의 체질량 지수, 주간 변화 그래프, 목표 달성률을
+                                    <br />
+                                    한눈에 확인해보세요!
+                                </h1>
+                            </div>
+                            <div class="tablet-home_under">
+                                <div class="tablet-home_left">
+                                    <div class="tablet-homes">
+                                        <span class="tablet-home_left_content">
+                                            <img id="tablet-pumi" src="./img2/tablet/home/pumi.png">
+                                            <span class="tablet-home_left_content_line" id="tablet-content">
+                                                <h3>오늘의 나</h3>
+                                                <div class="tablet_line"><img src="./img2/tablet/home/line1.png"></div>
+                                            </span>
+                                            <h4 id="tablet-text">
+                                                아이가 스스로 자신의 신체 데이터를
+                                                <br />
+                                                확인할 수 있어요. 그리고 정해둔
+                                                <br />
+                                                목표를 계속해서 확인할 수 있어요.
+                                            </h4>
+                                        </span>
+                                    </div>
+                                    <div class="tablet-home_left_img">
+                                        <img src="./img2/tablet/home/screen1.png">
+                                    </div>
+                                </div>
+                                <div class="tablet-home_right">
+                                    <div class="tablet-home_ab">
+                                        <img id="tablet-toto" src="./img2/tablet/home/toto.png">
+                                        <img id="tablet-ohmong" src="./img2/tablet/home/ohmong.png">
+                                    </div>
+                                    <div class="tablet-home_1">
+                                        <span class="tablet-home_left_content_line" id="tablet-content">
+                                            <h3>오늘 놀이</h3>
+                                        </span>
+                                        <div class="tablet_line4"><img src="./img2/tablet/home/line2.png"></div>
+                                        <h4 id="tablet-text">
+                                            식습관을 잡기 위한 활동들을 아이와
+                                            <br />
+                                            함께 진행할 수 있어요. 게임이나
+                                            <br />
+                                            같이 씹기로 습관 개선을 즐겨보세요!
+                                        </h4>
+                                    </div>
+                                    <div class="tablet-home_2">
+                                        <span class="tablet-home_left_content_line" id="tablet-content">
+                                            <h3>오늘 수업</h3>
+                                        </span>
+                                        <div class="tablet_line4"><img src="./img2/tablet/home/line3.png"></div>
+                                        <h4 id="tablet-text">
+                                            궁금하거나 기본적으로 배워야 하는
+                                            <br />
+                                            내용을 모아볼 수 있고 쉽게 들을 수
+                                            <br />
+                                            있어요.
+                                        </h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tablet-color2"></div>
+                        <div class="tablet-bmi">
+                            <div class="tablet_content">
+                                <h2 class="service_name">오늘의 나</h2>
+                                <h1 class="service_content">
+                                    연동한 체중계로 자녀의 BMI를 한눈에!
+                                    <br />
+                                    한 달 변화부터 자세한 신체 데이터까지
+                                </h1>
+                            </div>
+                            <div class="tablet-bmi_under">
+                                <div class="tablet-bmi_1">
+                                    <div class="tablet-bmi_left">
+                                        <div class="tablet-bmis">
+                                            <span class="tablet-bmi_left_content">
+                                                <span class="tablet-bmi_left_content_line" id="tablet-content">
+                                                    <h3>오늘의 나</h3>
+                                                    <div class="tablet_line"><img src="./img2/tablet/today/line1.png">
+                                                    </div>
+                                                </span>
+                                                <h4 id="tablet-text">
+                                                    변화 그래프를 통해서 매번 측정하는
+                                                    <br />
+                                                    데이터를 한눈에 볼 수 있어요. 이번
+                                                    <br />
+                                                    목표도 한눈에 확인할 수 있어요.
+                                                </h4>
+                                            </span>
+                                        </div>
+                                        <div class="tablet-bmi_left_img">
+                                            <img src="./img2/tablet/today/screen1.png">
+                                        </div>
+                                    </div>
+                                    <img class="tablet-bmi_img" src="./img2/tablet/today/screen2.png">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tablet-play">
+                            <div class="tablet_content">
+                                <h2 class="service_name">오늘 놀이</h2>
+                                <h1 class="service_content">
+                                    지루하기 만한 습관 고치기 이제 그만!
+                                    <br />
+                                    미오 친구들과 즐겁게 놀면서 차근차근 바꿔봐요
+                                </h1>
+                            </div>
+                            <div class="tablet-play_under">
+                                <div class="tablet-play_under_wrap">
+                                    <div class="tablet-play_up">
+                                        <img src="./img2/tablet/play/screen1.png">
+                                    </div>
+                                    <div class="tablet-play_down">
+                                        <div class="tablet-play_wrap">
+                                            <div class="tablet-play_down1">
+                                                <span class="tablet-play_down1_content">
+                                                    <span class="tablet-play_down1_content_line" id="tablet-content">
+                                                        <h3>미오와 같이 먹기</h3>
+                                                    </span>
+                                                    <h4 id="tablet-text">
+                                                        앞에 있는 푸미와 다같이 먹어볼까요?
+                                                        <br />
+                                                        같이 먹기를 통해 씹는 속도를 맞추어
+                                                        <br />
+                                                        건강한 식습관을 만들어 보아요.
+                                                    </h4>
+
+                                                </span>
+                                                <img src="./img2/tablet/play/screen2.png">
+                                            </div>
+                                            <div class="tablet-play_down2">
+                                                <span class="tablet-play_down2_content">
+                                                    <span class="tablet-play_down2_content_line" id="tablet-content">
+                                                        <h3>미오 마을 놀러가기</h3>
+                                                    </span>
+                                                    <h4 id="tablet-text">
+                                                        미오 마을에 놀러와서 푸미에게 채소를
+                                                        <br />
+                                                        골라주세요! 채소를 골라주며, 식재료에
+                                                        <br />
+                                                        대한 공부도 같이해요.
+                                                    </h4>
+                                                </span>
+                                                <img src="./img2/tablet/play/screen3.png">
+                                            </div>
+                                            <div class="tablet-play_line">
+                                                <img src="./img2/tablet/play/line1.png">
+                                                <img src="./img2/tablet/play/line2.png">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tablet-color"></div>
+                        <div class="tablet-teach">
+
+                            <div class="tablet_content">
+                                <h2 class="service_name">오늘 수업</h2>
+                                <h1 class="service_content">
+                                    정보 공유로는 부족할 때!
+                                    <br />
+                                    전문가가 들려주는 강의들과 함께 해요
+                                </h1>
+                            </div>
+                            <div class="tablet-teach_under">
+                                <div class="tablet-teach_1">
+                                    <div class="tablet-teach_left">
+                                        <div class="tablet-teach_left_img">
+                                            <img src="./img2/tablet/teach/screen1.png">
+                                        </div>
+                                        <div class="tablet_line"><img src="./img2/tablet/teach/line1.png"></div>
+                                        <span class="tablet-teach_right_goals" id="mobile-content3">
+                                            <span class="tablet-teach_right_goals_line">
+                                                <h3>오늘 수업</h3>
+                                            </span>
+                                            <h4 id="tablet-text">
+                                                진행중인 강의를 마저 들을 수 있어요.
+                                                <br />
+                                                소아비만을 도와주는 수업을 듣기도
+                                                <br />
+                                                하고 따로 특별 수업도 들어보세요.
+                                            </h4>
+                                        </span>
+
+                                    </div>
+                                    <img class="tablet-teach_img" src="./img2/tablet/teach/screen2.png">
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </section>
+
+
+
+
+            <!-- 여기까지  -->
+
+            
+            <section id="mock-up">
+                <div class="mockup-1">
+                    <img src="./img/mockup-1.png" alt="">
+                </div>
+                <div class="mockup-2">
+                    <img src="./img/mockup-2.png" alt="">
+                </div>
+                <div class="mockup-3">
+                    <img src="./img/mockup-3.png" alt="">
+                </div>
+            </section>
+        </main>
+
+
+        <footer>
+            <a name="team"></a>
+            <div class="footer-section">
+                <strong>Team. 아기돼지육남매</strong>
+                <div class="footer-team">
+                    <div class="team-1">
+                        <h2>Planner</h2>
+                        <img src="./img/team-img.png" alt="">
+                        <h3>장지혁</h3>
+                        <p>wlgur64404@gmail.com</p>
+                    </div>
+
+                    <div class="team-2">
+                        <h2>Designer</h2>
+                        <img src="./img/team-img.png" alt="">
+                        <h3>고유정</h3>
+                        <P>creephyp8@gmail.com</P>
+                    </div>
+                    <div class="team-3">
+                        <h2>Designer</h2>
+                        <img src="./img/team-img.png" alt="">
+                        <h3>김시은</h3>
+                        <p>sieunk04@gmail.com</p>
+                    </div>
+                    <div class="team-4">
+                        <h2>Designer</h2>
+                        <img src="./img/team-img.png" alt="">
+                        <h3>성아현</h3>
+                        <p>sah100@naver.com</p>
+                    </div>
+                    <div class="team-5">
+                        <h2>Programmer</h2>
+                        <img src="./img/team-img.png" alt="">
+                        <h3>김정현</h3>
+                        <p>lucy1216@naver.com</p>
+                    </div>
+                    <div class="team-6">
+                        <h2>Programmer</h2>
+                        <img src="./img/team-img.png" alt="">
+                        <h3>남수진</h3>
+                        <p>suzie27@naver.com</p>
+                    </div>
+                </div>
+                <p class="team-right">©2023 아기돼지육남매. 모든 권리 보유</p>
+            </div>
+        </footer>
+    </div>
+
+
+    <script src="./js/header.js"></script>
+    <script src="./js/index.js"></script>
+    <script src="./js/scrollevent.js"></script>
+    <script src="./js/mobile_tablet.js"></script>
+</body>
+
+</html>
